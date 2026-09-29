@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#5b1a26">
+  <title>Slay'z · Démo boutique en ligne</title>
+  <meta name="description" content="Démo de boutique en ligne conçue pour Slay'z Fashion Store. Aucune commande réelle.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23f3e1d9'/%3E%3Ctext x='32' y='44' font-family='Georgia' font-style='italic' font-size='34' text-anchor='middle' fill='%235b1a26'%3ES%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Jost:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="ribbon" role="note">
+    <span class="ribbon-track">
+      <b>Démo</b> conçue pour Slay'z par <span data-maker></span> · aucune commande réelle · photos et prix d'illustration ·
+      <a href="#/demo">Qu'est-ce que cette démo&nbsp;?</a>
+    </span>
+  </div>
+
+  <header class="top">
+    <button class="icon-btn" data-open="menu" aria-label="Menu">
+      <svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h12M3 17h18"/></svg>
+    </button>
+    <a href="#/" class="wordmark" aria-label="Accueil Slay'z">Slay'z<small>fashion store</small></a>
+    <nav class="top-nav">
+      <a href="#/boutique">Boutique</a>
+      <a href="#/boutique?cat=nouveautes">Nouveautés</a>
+      <a href="#/gerante">Espace gérante</a>
+    </nav>
+    <button class="icon-btn cart-btn" data-open="cart" aria-label="Panier">
+      <svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="cart-count" hidden>0</span>
+    </button>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="foot">
+    <div class="foot-mark">Slay'z</div>
+    <div class="foot-cols">
+      <div><h4>Boutique</h4><a href="#/boutique">Toute la collection</a><a href="#/boutique?cat=abayas">Abayas & kaftans</a><a href="#/boutique?cat=tailleurs">Tailleurs</a></div>
+      <div><h4>Aide</h4><a href="#/demo">Livraison & retours</a><a href="#/demo">Guide des tailles</a><a href="https://www.instagram.com/slayz.fashionstore/" target="_blank" rel="noopener">Instagram</a></div>
+    </div>
+    <p class="foot-note">Maquette de démonstration réalisée par <span data-maker></span> pour Slay'z Fashion Store. Non commerciale, non indexée. Photos Unsplash utilisées à titre d'illustration&nbsp;: aucune ne représente un article Slay'z.</p>
+  </footer>
+
+  <!-- Drawers & sheets -->
+  <div class="scrim" data-close></div>
+
+  <aside class="drawer menu-drawer" id="menu" aria-label="Menu">
+    <button class="icon-btn close" data-close aria-label="Fermer"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <div class="menu-links"></div>
+    <a class="menu-owner" href="#/gerante">Espace gérante <span>simulation</span></a>
+  </aside>
+
+  <aside class="drawer cart-drawer" id="cart" aria-label="Panier">
+    <div class="drawer-head"><h3>Votre panier</h3><button class="icon-btn" data-close aria-label="Fermer"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+    <div class="cart-body"></div>
+  </aside>
+
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
+  <div class="story" id="story" role="dialog" aria-modal="true"></div>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
