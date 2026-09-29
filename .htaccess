@@ -1,0 +1,11 @@
+# Hostinger (LiteSpeed/Apache) equivalent of vercel.json: keep the demo out of search engines.
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow, noarchive"
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  <FilesMatch "\.(webp)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+</IfModule>
+# Never serve repo internals if the whole repo lands in public_html.
+RedirectMatch 404 /(\.git|CLAUDE\.md|vercel\.json)

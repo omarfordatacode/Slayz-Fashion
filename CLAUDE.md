@@ -18,7 +18,7 @@ Static HTML/CSS/vanilla JS, no build step. `index.html`, `css/style.css`, `js/da
 `localStorage` only. Images: Unsplash (licence allows use), WebP in `img/`, `-s` = small.
 
 - Run locally: `python -m http.server 5173` in this folder.
-- Deploy: private GitHub repo → Vercel import, framework "Other", no build command, output dir `.`.
+- Deploy: Hostinger web hosting, hPanel → Advanced → Git, private repo via SSH deploy key, branch main, into public_html (or a subdomain folder). `.htaccess` sends noindex and hides `.git`/`CLAUDE.md`. (`vercel.json` kept in case of Vercel later.)
 - `vercel.json` sends `X-Robots-Tag: noindex`; `robots.txt` disallows all.
 - Expiry: `config.expires` in `js/data.js` (currently 2026-11-15). After it, the site shows "démo expirée".
 - Rollback: `git revert` / redeploy previous commit from the Vercel dashboard.
